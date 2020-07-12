@@ -7,10 +7,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import java.util.Locale;
 
 public class StopwatchActivity extends Activity {
+
 
     private int seconds = 0;
     private boolean running;
@@ -56,24 +59,34 @@ public class StopwatchActivity extends Activity {
 
     //Start the stopwatch when start button is clicked
     public void onClickStart(View view){
-
         running = true;
+        view.startAnimation(AnimationUtils.loadAnimation(
+                getApplicationContext(),
+                R.anim.blink
+        ));
     }
 
     //Stop the stopwatch when the stop button is clicked
     public void onClickStop(View view){
-
         running = false;
+        view.startAnimation(AnimationUtils.loadAnimation(
+                getApplicationContext(),
+                R.anim.blink
+        ));
     }
 
     // Reset the stopwatch when the Reset button is clicked.
     public void onClickReset(View view){
         running = false;
         seconds = 0;
+        view.startAnimation(AnimationUtils.loadAnimation(
+                getApplicationContext(),
+                R.anim.bounce
+        ));
     }
 
     private void runTimer(){
-        final TextView timeView = (TextView) findViewById(R.id.time_view);
+        final TextView timeView =  findViewById(R.id.time_view);
         final Handler handler = new Handler();
 
         //Call the post() method, passing in a new Runnable. The post()
@@ -86,15 +99,14 @@ public class StopwatchActivity extends Activity {
                 int minutes = (seconds%3600)/60;
                 int secs = seconds%60;
                 String time = String.format(Locale.getDefault(),
-                        "%d:%02d:%02d", hours,minutes,secs);
+                        "%d:%02d.%02d", hours,minutes,secs);
                 timeView.setText(time);
                 if(running){
                     seconds++;
                 }
-                handler.postDelayed(this, 1000);
+                handler.postDelayed(this, 10);
             }
         });
 
     }
-
 }

@@ -3,4 +3,8 @@
     <string name="start_time">Start</string>
     <string name="stop_time">Stop</string>
     <string name="reset_time">Reset</string>
+    <string name="descStart">Just the start button</string>
+    <string name="descStop">Stop button</string>
+    <string name="descReset">Reset button</string>
+
 </resources>

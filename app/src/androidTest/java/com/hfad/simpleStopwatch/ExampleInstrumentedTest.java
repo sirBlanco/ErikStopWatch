@@ -1,4 +1,4 @@
-package com.hfad.erikstopwatch;
+package com.hfad.simpleStopwatch;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

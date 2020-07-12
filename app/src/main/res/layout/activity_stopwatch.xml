@@ -17,18 +17,18 @@
 
         <TextView
             android:id="@+id/time_view"
-            android:layout_width="223dp"
-            android:layout_height="98dp"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:textAppearance="@android:style/TextAppearance.Large"
             android:textSize="56sp"
             app:layout_constraintBottom_toTopOf="@id/start_time"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.658"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintVertical_bias=".3"
-            />
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <ImageView
             android:id="@+id/start_time"

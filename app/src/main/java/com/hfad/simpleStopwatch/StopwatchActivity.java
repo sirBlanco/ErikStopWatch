@@ -1,13 +1,10 @@
-package com.hfad.erikstopwatch;
+package com.hfad.simpleStopwatch;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import java.util.Locale;

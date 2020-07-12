@@ -1,4 +1,4 @@
-package com.hfad.erikstopwatch;
+package com.hfad.simpleStopwatch;
 
 import org.junit.Test;
 
